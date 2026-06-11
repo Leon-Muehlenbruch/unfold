@@ -1,0 +1,7 @@
+numpy
+rasterio
+geopandas
+shapely
+pandas
+# only for unf-view (maps/PNG):
+matplotlib

@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "unfold-gis"
+version = "1.0.0"
+description = "unfold — WaterGAP UNF to GeoTIFF/GeoPackage + UNF viewer"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Leon Mühlenbruch" }]
+keywords = ["watergap", "worldqual", "unf", "geopackage", "geotiff", "qgis", "gis", "unfold"]
+dependencies = [
+    "numpy",
+    "rasterio",
+    "geopandas",
+    "shapely",
+    "pandas",
+]
+
+[project.optional-dependencies]
+# unf-view shows maps/PNG; only needed if you use the viewer
+view = ["matplotlib"]
+# drag & drop in the GUI; without the package the GUI still runs, just no dragging
+gui = ["tkinterdnd2"]
+
+[project.scripts]
+unfold = "unfold.convert:main"
+unf-view = "unfold.view:main"
+
+[tool.setuptools]
+packages = ["unfold"]
+
+[tool.setuptools.package-data]
+unfold = ["grids.json"]

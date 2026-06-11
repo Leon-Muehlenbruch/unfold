@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.eggs/
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+
+# Outputs / data (not versioned)
+/outputs/
+*.gpkg
+*.tif
+*.tiff
+*.png
+# raw UNF data does not belong in the repo
+*.UNF0
+*.UNF1
+*.UNF2
+*.UNF4
+
+# Local Claude Code settings (personal)
+.claude/settings.local.json
