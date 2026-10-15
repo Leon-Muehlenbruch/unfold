@@ -27,3 +27,7 @@ venv/
 
 # Local Claude Code settings (personal)
 .claude/settings.local.json
+
+# Claude Code project memory (private, not published)
+.claude/memory/
+CLAUDE.md
